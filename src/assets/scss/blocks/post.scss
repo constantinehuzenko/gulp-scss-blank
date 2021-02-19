@@ -1,0 +1,28 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post {
+  width: 45%;
+  margin: 24px;
+  padding: 24px;
+  background: $secondary;
+  box-shadow: $shadow;
+  border-radius: 24px;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0px 0px 5px rgb(49, 40, 40);
+  }
+
+  &__header {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}

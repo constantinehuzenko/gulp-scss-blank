@@ -1,0 +1,14 @@
+@import './vars';
+@import './vendor/reset.scss';
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: $background;
+  font-size: 21px;
+  color: $primary;
+}
+
+@import './blocks/header.scss';
+@import './blocks/post.scss';

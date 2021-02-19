@@ -1,0 +1,73 @@
+.header {
+  display: flex;
+  box-shadow: $shadow;
+  overflow: hidden;
+  border-radius: 0 0 16px 16px;
+  background: $secondary;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    margin: 0 0 0 8px;
+    padding: 24px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 800;
+
+    &:hover {
+      opacity: $opacity;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav {
+  &__inner {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 8px;
+
+    &:hover {
+      & > .contacts__drop {
+        left: -140px;
+      }
+    }
+  }
+
+  &__link {
+    color: unset;
+    text-decoration: none;
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+}
+
+.contacts__drop {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: -24px;
+  left: 85px;
+
+  width: 220px;
+  height: 75px;
+  overflow: hidden;
+  background: $background;
+  transition: $transition;
+  border-radius: 0 0 0 16px;
+  cursor: pointer;
+  &-item {
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+}

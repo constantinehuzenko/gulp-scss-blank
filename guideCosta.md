@@ -27,7 +27,8 @@
    2. `npm install` (if new version was founded)
    
 ## How to run build?
-   1. `gulp` (Just for run)
+   1. `gulp` (Just for local run)
+   2. `gulp build` (To update dist)
 
 <br />
 

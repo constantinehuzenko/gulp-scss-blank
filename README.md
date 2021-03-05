@@ -23,8 +23,9 @@
 # Questions
 
 ## How to update versions?
-   1. `ncu -u --packageFile package.json` (check what we need to update)
+   1. `npm install --global gulp-cli`
    2. `npm install` (if new version was founded)
+   3. `ncu -u --packageFile package.json` (check what we need to update)
    
 ## How to run build?
    1. `gulp` (Just for local run)

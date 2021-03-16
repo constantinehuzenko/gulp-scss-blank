@@ -1,5 +1,18 @@
 
-#Costa Gulp-Scss-Assembly
+# Costa Gulp-Scss-Assembly
+   
+## Run build
+   1. `npm install --global gulp-cli` (if you don't have gulp)
+   2. `npm install`
+   3. `gulp` (local host run)
+   4. `gulp build` (To update dist)
+   
+<br />
+
+## Update versions:
+   1. `ncu -u --packageFile package.json` (check what we need to update)
+
+<br />
 
 ## Benefits: 
 1. Module Html support.
@@ -12,20 +25,9 @@
 8. Module JS support.
 9. Finily only one JS.min (Babel) file.
 
-# Questions
+<!-- <br />
 
-## How to update versions?
-   1. `npm install --global gulp-cli`
-   2. `npm install` (if new version was founded)
-   3. `ncu -u --packageFile package.json` (check what we need to update)
-   
-## How to run build?
-   1. `gulp` (Just for local run)
-   2. `gulp build` (To update dist)
-
-<br />
-
-# Tasks:
+## Tasks:
 - [x] task1
 - [x] task2
 - [x] task3
@@ -36,4 +38,4 @@
 | Left  | Center | Rigth |
 | :---: | :----: | :---: |
 |   1   |   2    |   3   |
-| Left  | Center | Rigth |
+| Left  | Center | Rigth | --> |

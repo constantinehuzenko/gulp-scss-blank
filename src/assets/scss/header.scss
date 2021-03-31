@@ -1,0 +1,192 @@
+@import './vars';
+@import './mixin';
+
+.header {
+  position: fixed;
+  width: 100%;
+
+  @include breakpoint($bp_md) {
+    display: flex;
+
+    max-height: $header_block;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
+
+.header__inner {
+  @include breakpoint($bp_md) {
+    display: flex;
+    height: 100%;
+
+    background: $primary;
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+
+  background: $primary;
+
+  @include breakpoint($bp_md) {
+    background: none;
+  }
+}
+
+.logo {
+  z-index: $z_logo;
+
+  img {
+    width: 100%;
+    max-width: 10rem;
+  }
+}
+
+.burger {
+  z-index: $z_logo;
+
+  img {
+    width: 100%;
+    max-width: 2rem;
+
+    @include breakpoint($bp_md) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 20%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background: url('https://images.pexels.com/photos/7174579/pexels-photo-7174579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+
+  text-align: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: $trans;
+
+  @include breakpoint($bp_md) {
+    position: static;
+    height: 100%;
+
+    flex-direction: row;
+
+    background: none;
+
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    margin: 3rem 0 0;
+
+    @include breakpoint($bp_md) {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    @include breakpoint($bp_md) {
+      position: relative;
+      margin: 0 0.5rem 0;
+    }
+  }
+
+  &__contact {
+    height: 100%;
+  }
+
+  &.burger-open {
+    left: 0;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav__drop {
+    position: absolute;
+    top: calc(#{$header_block} - 20px);
+    left: -150%;
+    flex-direction: column;
+    background: $primary;
+    white-space: nowrap;
+    text-align: left;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: $trans;
+
+    &-open {
+      top: $header_block;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.lang {
+  height: 100%;
+
+  text-transform: uppercase;
+
+  @include breakpoint($bp_md) {
+    position: relative;
+  }
+
+  &__icon {
+    display: none;
+    width: 100%;
+    max-width: 1.5rem;
+
+    @include breakpoint($bp_md) {
+      display: flex;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint($bp_md) {
+      position: absolute;
+      flex-direction: column;
+      width: 2.5rem;
+      height: 3rem;
+      top: calc(#{$header_block} - 20px);
+
+      z-index: $z_lang;
+
+      transition: $trans;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &.lang-open {
+      background: $primary;
+
+      opacity: 1;
+      pointer-events: all;
+      top: $header_block;
+    }
+  }
+}
